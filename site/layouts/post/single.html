@@ -1,9 +1,5 @@
 {{ define "main" }}
 
-<!-- ここに目次生成 -->
-<nav class="js-toc"></nav>
-<!-- Tocbot -->
-<article class="article js-toc-content">
 
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
@@ -11,13 +7,19 @@
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
+
+    <!-- ここに目次生成 -->
+    <nav class="js-toc"></nav>
+    <!-- Tocbot -->
+    <article class="article js-toc-content">
+
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
-  </div>
-  
-<!-- Tocbot -->
+
+    <!-- Tocbot -->
 </article>
+  </div>
 {{ end }}
