@@ -6,6 +6,13 @@
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
+    
+    {{ if gt (len .TableOfContents) 33 }}
+    <h2>目次</h2>
+    {{ .TableOfContents }}
+    {{ end }}
+
+
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}

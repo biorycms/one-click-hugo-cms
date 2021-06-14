@@ -3,9 +3,4 @@
 {{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
 {{ .Content }}
 
-{{ if gt (len .TableOfContents) 33 }}
-<h2>目次</h2>
-{{ .TableOfContents }}
-{{ end }}
-
 {{ end }}
