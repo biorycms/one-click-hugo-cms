@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+<!-- ここに目次生成 -->
+<nav class="js-toc"></nav>
+<article class="article js-toc-content">
+
+</article>
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
@@ -12,4 +17,6 @@
       {{ .Content }}
     </div>
   </div>
+</article>
+
 {{ end }}
